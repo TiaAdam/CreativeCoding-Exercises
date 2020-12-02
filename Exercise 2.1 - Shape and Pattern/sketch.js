@@ -22,7 +22,6 @@ stepAngle = 360/numOfSegments;
 // Allows us to increase and decrease radius as we move the mouse.
 radius = map(mouseX,0,400,50,200);
 
-
 fill(360-mouseY/2,100,100);
 ellipse(height/2,height/2, mouseX+1,mouseX+1); // x,y,width,height.
 
