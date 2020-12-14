@@ -1,5 +1,5 @@
-// Shape and Pattern 11.11.2020
-// Exercise - Our Pattern
+// Creative Coding - Year 4 - Term 1
+// Exercise Challenge - Our Pattern
 // The Shining carpet pattern
 
 let numOfHex = 6;
@@ -15,7 +15,6 @@ noStroke();
 }
 
 function draw() {
-  //background(19,84,88);
    background(22,19,23);
 
   for( let j=0; j<=numOfHex; j++){
@@ -44,10 +43,4 @@ function draw() {
       pop();
     }
   }
-} // end of draw function
-
-// orange color for hexagons
-//fill(19,84,88);
-// color for circle inside of the hex
-// fill(358,81,61);
-//background(22,19,23);
+} // End of draw function.
