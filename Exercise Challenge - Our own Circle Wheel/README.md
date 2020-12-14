@@ -3,7 +3,10 @@
 ---
 Excersise Challenge - Our own Circle Wheel
 
-- This file contains code for Homework Exercise which requires to create a color wheel based on
-the previous exercises that we have done and also create a differen version/variation of it - make it creative.
+- In this Exercise, we were required to create our own Circle Wheel, based on previous Exercises we did for this module.
+
+- For this Exercise, an if-else statement is created which is passing a mouseIsPressed parameter and drawGradient function. Statement will either display a triangle fan (circle wheel) or make it disappear.
+
+- drawGradient function will change the color within the triangle fan in circular motion.
 
 ```

@@ -1,5 +1,5 @@
-// Creative Coding
-// Homework Exercise - Color Wheel
+// Creative Coding - Year 4 - Term 1
+// Exercise Challenge - Our own Circle Wheel
 
 // Variables that will be used in the exercise.
 let numOfSegments = 10;
@@ -7,18 +7,20 @@ let stepAngle = 360/numOfSegments;
 let radius = 100;
 let dim;
 
-function setup(){
+// This function runs once. In here, we set up a Canvas.
+function setup() {
 createCanvas(710,400);
 colorMode(HSB,360,100,100);
 angleMode(DEGREES);
 noStroke();
-frameRate(2); // for gradient
+frameRate(2); // For Gradient.
 dim = width / 2;
 }
 
 function draw(){
   background('grey');
 
+// If statement which will make circles either appear or disappear
 if(mouseIsPressed){
   drawGradient(TRIANGLE_FAN, height / 2);
 } else {
