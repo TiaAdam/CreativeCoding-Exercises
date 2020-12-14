@@ -1,24 +1,23 @@
-
-// Shape and Pattern 28.10.2020
-// Exercise 03 - Displaying random pattern with lines
+// Creative Coding - Year 4 - Term 1
+// Exercise 2.3 - Displaying randomized pattern
 
 let numOfSquares = 10;
 let squareSize = 500/numOfSquares;
 
+// This function runs once. In here, we set up a Canvas.
 function setup(){
 createCanvas(500,500);
 colorMode(HSB,360,100,100);
 rectMode(CENTER);
 noStroke();
 noLoop();
-//frameRate(10);
 }
 
 function draw(){
-//background(175,66,93);
 background(0);
 
-// y-axis
+// Nested for loop that draws rectangles across the Canvas.
+// y-axis - Always goes first in the loop!
   for( let j=0; j<=numOfSquares; j++){
     // x-axis
     for(let i=0; i<numOfSquares; i++){
@@ -37,7 +36,7 @@ background(0);
       //fill(lerpedColor);
       //stroke(360,100,100);
 
-      // if statements, which will display either output when it's 0 or 1
+      // If statements, which will display either output when it's 0 or 1.
           if(random(1) > 0.5){
             noStroke();
             fill(300,19,78);
@@ -61,4 +60,4 @@ background(0);
 
     }
   }
-} //end of draw function
+} // End of draw function.
