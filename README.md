@@ -8,5 +8,6 @@
 
 -  Each folder contains an index.html file, sketch.js (where major code goes), README.md file and Images folder which demonstrates the outcome of the Exercise.
 
+- Underneath each Exercise image and description there is a 'More' button, which will re-direct user to that specific Exercise.
 
 ```
