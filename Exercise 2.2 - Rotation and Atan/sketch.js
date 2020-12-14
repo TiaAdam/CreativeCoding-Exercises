@@ -14,8 +14,9 @@ noStroke();
 
 function draw(){
 background(0);
+
 // Nested for loop that draws rectangles across the Canvas.
-// y-axis
+// y-axis - Always goes first in the loop!
   for( let j=0; j<=numOfSquares; j++){
     // x-axis
     for(let i=0; i<numOfSquares; i++){
@@ -34,6 +35,7 @@ background(0);
       let endColor = color(200,50,50);
       let lerpedColor = lerpColor(startColor,endColor,(i+j*numOfSquares)/400);
 
+      // Filling squares that will rotate with lerped color.
       fill(lerpedColor);
       stroke(360,100,100);
       rect(0,0,scale,scale);
