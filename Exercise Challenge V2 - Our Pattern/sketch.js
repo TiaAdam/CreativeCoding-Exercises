@@ -1,5 +1,5 @@
-// Shape and Pattern 16.11.2020
-// Exercise - Our Pattern, version 2
+// Creative Coding - Year 4 - Term 1
+// Exercise Challenge V2 - Our Pattern
 // The Shining carpet pattern
 
 // Hexagon 1
@@ -49,7 +49,8 @@ function draw() {
       pop();
     }
   }
-} // end of draw function
+} // End of draw function
+
 
 function createHex(){
   // Creating a for loop
