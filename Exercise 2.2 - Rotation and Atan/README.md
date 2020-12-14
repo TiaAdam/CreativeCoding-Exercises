@@ -1,14 +1,18 @@
 ### Creative Coding - Term 1
 ### Year 4
 ---
-Excersise 1.5 - Lerp Color
+Excersise 2.2 - Rotation and Atan
 
- - In this Exercise, we learned how to use Lerp Color function provided by p5.
+ - In this Exercise, we learned how to use rotation (rotate()) function provided to us by P5 and Atan2 function.
 
- - Lerp Color function, lerpColor(), blends two colors to find a third color somewhere in between them. It takes three parameters: color1, color2 and amt.
+ - Rotation function, rotate(), rotates a shape by the amount that is specified by angle parameter. Angle mode is important for this function to work and we can use it in either RADIANS or DEGREES.
 
- - Amt parameter is the amount between the two values where 0.0 is equal to color1, 0.1 close to color1, 0.5 is in the middle, etc.
+ - Atan2 function, calculates the angle in radians from a specified point to the coordinate origin as measured from the positive point on x-axis.
 
- - Again for this exercise, we created Circle Wheel (Triangle fan), which we then later filled with colors we lerped using Lerp Color.
+ - In this exercise, we also used dist() function which calculates the distance between two points, as well as map() function which re-maps number from one range to another.
+
+ - For this exercise, we worked with variables numOfSquares and squareSize - size of squares is determined by dividing the width of the Canvas, 500, with numOfSquares we want to display on it.
+
+ - A for loop was created which first looped throuhgh y-axis values (j) and then throuhg x-axis values (i) in order to draw shape across the Canvas.
 
 ```
