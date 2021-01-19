@@ -15,12 +15,11 @@ let circleYpos = 250;
 
   if(direction == -1){
     circleXpos = circleXpos + direction;
-
   } else if( direction == 1){
     circleXpos = circleXpos + direction;
-
   } else {
     circleXpos = circleXpos;
   }
   //console.log(direction);
- }
+  
+} // End of draw function
