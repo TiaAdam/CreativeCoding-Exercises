@@ -1,4 +1,6 @@
 let direction;
+let circleXpos = 250;
+let circleYpos = 250;
 
 
  function setup() {
@@ -8,8 +10,17 @@ let direction;
  }
 
  function draw() {
-
-   ellipse(250,250,25,25);
+  ellipse(circleXpos,circleYpos,25,25);
   direction = round(random(-1,1));
+
+  if(direction == -1){
+    circleXpos = circleXpos + direction;
+
+  } else if( direction == 1){
+    circleXpos = circleXpos + direction;
+
+  } else {
+    circleXpos = circleXpos;
+  }
   //console.log(direction);
  }
