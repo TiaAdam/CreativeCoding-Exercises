@@ -34,3 +34,4 @@ let circleYpos = 250;
 // let moveY = randomNumY * stepSize;
 // xPos += moveX;
 // yPos += moveY;
+// ellipse(xPos, yPos, 1, 1);
