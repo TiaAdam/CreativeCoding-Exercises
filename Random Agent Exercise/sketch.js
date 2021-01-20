@@ -10,6 +10,7 @@ let circleYpos = 250;
  }
 
  function draw() {
+   fill(255,0,0);
   ellipse(circleXpos,circleYpos,25,25);
   direction = round(random(-1,1));
 
@@ -28,11 +29,12 @@ let circleYpos = 250;
 // 19.1.2021
 // John's code
 // Normalization
-// let randomNum(X or Y) = round(random(-1,1));
+// let randomNumX = round(random(-1,1));
+// let randomNumY = round(random(-1,1));
 // let moveX = randomNumX * stepSize;
 // let moveY = randomNumY * stepSize;
 // xPos += moveX;
 // yPos += moveY;
-// ellipse(xPos, yPos, 1, 1);
+// ellipse(xPos, yPos, 5, 5);
 
 // How to pick only between two options when there are 3?
