@@ -2,8 +2,8 @@ let direction;
 let xPos = 250; // tracking the position of the object
 let yPos = 250;
 let stepSize = 5; // We can use it for moving the object.
-let optionsX = [-1, 0, 1,1];
-let optionsY = [-1, 0, 1,1];
+let optionsX = [-1,-1, 0, 1, 1, 1, 1];
+let optionsY = [-1, 0, 1];
 
  function setup() {
    createCanvas(500,500);
@@ -15,13 +15,13 @@ let optionsY = [-1, 0, 1,1];
    let diam = map(mouseY, 0, width, 1, 10);
 
    for(let x = 0; x < speed; x++){
-     fill(250,10);
+     fill(255);
      noStroke();
-     let randomNumX = round(random(0,3));
-     let randomNumY = round(random(0,3));
-
-      let moveX = optionsX[randomNumX] * stepSize;
-      let moveY = optionsX[randomNumY] * stepSize;
+     //let randomNumX = round(random(0, optionsX.length));
+     //let randomNumY = round(random(0, optionsY.length));
+     
+      let moveX = optionsX[floor(random(0, optionsX.length))] * stepSize;
+      let moveY = optionsX[floor(random(0, optionsY.length))] * stepSize;
       //let moveX = randomNumX * stepSize;
       //let moveY = randomNumY * stepSize;
 
