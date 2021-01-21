@@ -16,7 +16,7 @@ let drawMode;
    let diam = map(mouseY, 0, width, 1, 10);
 
    for(let x = 0; x < speed; x++){
-     fill(255);
+     fill(250, 40);
      noStroke();
      //let randomNumX = round(random(0, optionsX.length));
      //let randomNumY = round(random(0, optionsY.length));
@@ -28,21 +28,27 @@ let drawMode;
 
       xPos += moveX;
       yPos += moveY;
+
+      xPos > width ? xPos = 0 : null;
+      xPos < 0 ? xPos = width : null;
+      yPos > height ? yPos = 0 : null;
+      yPos < 0 ? yPos = height : null;
+
       ellipse(xPos, yPos, 5, 5);
 
   } // End of Loop
-  checkBoundaries();
+  //checkBoundaries();
 } // End of draw function
 
-function checkBoundaries() {
-  if(yPos < 500 || yPos < 0) {
-    yPos = 500 / 2;
-  }
 
-  if (xPos > 500 || xPos < 0) {
-    xPos = 0;
-  }
-}
+//function checkBoundaries() {
+  //if(yPos < 500 || yPos < 0) {
+    //yPos = 500 / 2;
+  //}
+  //if (xPos > 500 || xPos < 0) {
+    //xPos = 0;
+  //}
+//}
 
 function keyReleased() {
   if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png');
