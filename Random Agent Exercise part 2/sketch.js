@@ -29,6 +29,7 @@ let drawMode;
       xPos += moveX;
       yPos += moveY;
 
+      // For 'restricting' the movement of the object when it's off canvas.
       xPos > width ? xPos = 0 : null;
       xPos < 0 ? xPos = width : null;
       yPos > height ? yPos = 0 : null;
