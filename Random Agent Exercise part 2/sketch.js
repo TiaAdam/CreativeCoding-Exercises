@@ -2,7 +2,7 @@
 let xPos = 250; // tracking the position of the object
 let yPos = 250;
 let stepSize = 5; // We can use it for moving the object.
-let optionsX = [-1,-1, 0, 1, 1, 1, 1];
+let optionsX = [-1,-1, 0, 1, 1, 1, 1]; // Array of possible options when object is moving on x-axis.
 let optionsY = [-1, 0, 1];
 let drawMode;
 
