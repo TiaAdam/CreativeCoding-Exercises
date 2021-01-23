@@ -1,8 +1,8 @@
-# Creative Coding  -Exercises - Term 1
+# Creative Coding  - Exercises 
 ## https://tiaadam.github.io/CreativeCoding-Exercises/
 
 ---
-- Folders of Exercises done in term 1 for Creative Coding module.
+- Folders of Exercises done in term 1 and term 2 for Creative Coding module.
 
 - Each Exercise folder is clearly labeled with number and name relevant to the Exercise.
 

@@ -41,6 +41,7 @@ let drawMode;
 } // End of draw function
 
 
+// CODE DONE WITH OTHER STUDENTS
 //function checkBoundaries() {
   //if(yPos < 500 || yPos < 0) {
     //yPos = 500 / 2;
