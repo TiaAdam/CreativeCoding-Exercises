@@ -14,6 +14,7 @@ let circleYpos = 250;
   ellipse(circleXpos,circleYpos,25,25);
   direction = round(random(-1,1));
 
+// Will move circle left and right on x and y-axis (randomly)
   if(direction == -1){
     circleXpos = circleXpos + direction;
   } else if( direction == 1){
