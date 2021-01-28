@@ -14,8 +14,8 @@ angle = 45
    let speed = map(mouseX,0, width, 2, 10);
 
    for(let x = 0; x < speed; x++){
-     fill(255,0,0);
-     noStroke();
+     stroke(255);
+     strokeWeight(10);
      point(xPos,yPos);
 
      // This code will move circle across the screen
