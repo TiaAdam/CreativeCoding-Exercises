@@ -1,7 +1,7 @@
 let xPos = 400; // tracking the position of the object
 let yPos = 400;
 let stepSize = 1; // We can use it for moving the object.
-let angle = 45
+let angle = 45;
 
 let angleCount = 3;
 let angles = [];
@@ -19,13 +19,11 @@ function setup() {
 }
 
 function draw() {
-
   for (let i = stepAngle; i < 90; i += stepAngle) {
     angles.push(i);
   } // End of loop
 
   let speed = map(mouseX, 0, width, 2, 40);
-
   for (let x = 0; x < 10; x++) {
     stroke(255);
     strokeWeight(5);
@@ -40,6 +38,11 @@ function draw() {
       console.log(angle);
     }
 
+    // Array which will store all of the previous circle points.
+    this.history = [];
+    this.history.push(this.xPos);
+    console.log(this.history);
+
   } // End of Loop
   //deflectAngle();
 } // End of draw function
@@ -53,6 +56,7 @@ function deflectAngle(_x, _y, _angles) {
 
   if (option = 0) {
     randomAngle = randomAngle * -1;
+    return randomAngle;
   }
 }
 
