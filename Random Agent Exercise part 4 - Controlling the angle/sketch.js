@@ -5,6 +5,7 @@ let angle = 45;
 
 let angleCount = 3;
 let angles = [];
+let history = [];
 let startAngle;
 let stepAngle;
 
@@ -39,24 +40,39 @@ function draw() {
     }
 
     // Array which will store all of the previous circle points.
-    this.history = [];
-    this.history.push(this.xPos);
+    let vector = createVector(this.xPos, this.yPos);
+    history.push(vector);
     console.log(this.history);
 
   } // End of Loop
-  //deflectAngle();
+  deflectAngle();
 } // End of draw function
 
 function deflectAngle(_x, _y, _angles) {
-  let randomNum = floor(random(_angles.length));
-  let randomAngle = _angles[randomNum];
-  //console.log(randomAngle);
+  // let randomNum = floor(random(_angles.length));
+  // let randomAngle = _angles[randomNum];
+  // //console.log(randomAngle);
+  //
+  // let option = floor(random(0, 3));
+  //
+  // if (option = 0) {
+  //   randomAngle = randomAngle * -1;
+  //   return randomAngle;
+  // }
 
-  let option = floor(random(0, 3));
+  let randomAngle = floor(random(0, 180));
 
-  if (option = 0) {
-    randomAngle = randomAngle * -1;
-    return randomAngle;
+  if (_x > width) {
+  return randomAngle + 90;
+  } else if (_x < 0) {
+  return randomAngle + 270;
+  }
+
+  if (_y > height) {
+  return randomAngle + 180;
+
+  } else if (_y < 0) {
+  return randomAngle;
   }
 }
 
