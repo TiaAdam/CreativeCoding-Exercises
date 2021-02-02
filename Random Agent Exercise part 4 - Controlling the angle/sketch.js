@@ -5,7 +5,7 @@ let angle = 45;
 
 let angleCount = 3;
 let angles = [];
-let history = [];
+let history = []; // Array which will store all of the points that circle make. 
 let startAngle;
 let stepAngle;
 
@@ -42,7 +42,7 @@ function draw() {
     // Array which will store all of the previous circle points.
     let vector = createVector(this.xPos, this.yPos);
     history.push(vector);
-    console.log(this.history);
+    //console.log(this.history);
 
   } // End of Loop
   deflectAngle();
