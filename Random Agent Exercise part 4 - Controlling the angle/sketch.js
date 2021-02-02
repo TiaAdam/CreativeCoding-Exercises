@@ -41,6 +41,7 @@ function draw() {
     }
 
   } // End of Loop
+  //deflectAngle();
 } // End of draw function
 
 function deflectAngle(_x, _y, _angles) {
