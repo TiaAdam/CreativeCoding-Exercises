@@ -34,16 +34,23 @@ function draw() {
   //
   // pop();
 
+
   fill(255, 0, 0);
-  ellipse(0, 300, 10, 10);
-  ellipse(500, 100, 10, 10);
+  ellipse(50, 300, 10, 10);
+  ellipse(250, 200, 10, 10);
 
   noFill();
   stroke(255);
+  push();
+  translate(width / 2, height / 2);
   beginShape();
-  curveVertex(0, 300); // Control point
-  curveVertex(100, 200);
-  curveVertex(200, 200);
-  curveVertex(500, 100); // Control point
+
+  curveVertex(points[points.length - 1].x, points[points.length - 1].y); // Control point, coordinate of the last point of the array
+  for (let i = 0; i < points.length; i++) {
+    curveVertex(points[i].x, points[i].y);
+  }
+  curveVertex(points[0].x, points[0].y);
   endShape();
-}
+  pop();
+
+} // End of loop
