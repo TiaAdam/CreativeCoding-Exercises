@@ -1,7 +1,7 @@
 // Curves 03.02.2021
 
 let points = [];
-let segments = 16;
+let segments = 10;
 let radius = 100;
 
 function setup() {
@@ -18,19 +18,32 @@ function setup() {
 }
 
 function draw() {
-  push();
-  translate(width / 2, height / 2);
-  for (let i = 0; i < points.length; i++) {
-    fill(0, 255, 0);
-    ellipse(points[i].x, points[i].y, 10, 5);
-  }
-  for (let i = 0; i < points.length - 1; i++) {
-    stroke(255);
-    line(points[i].x, points[i].y, points[i + 1].x, points[i + 1].y);
-  }
+  // push();
+  // translate(width / 2, height / 2);
+  // for (let i = 0; i < points.length; i++) {
+  //   fill(0, 255, 0);
+  //   ellipse(points[i].x, points[i].y, 10, 5);
+  // }
+  // for (let i = 0; i < points.length - 1; i++) {
+  //   stroke(255);
+  //   line(points[i].x, points[i].y, points[i + 1].x, points[i + 1].y);
+  // }
+  //
+  // // Drawing a line inbetween the points.
+  // line(points[points.length - 1].x, points[point.length - 1].y, points[0].x, points[0].y);
+  //
+  // pop();
 
-  // Drawing a line inbetween the points.
-  line(points[points.length - 1].x, points[point.length - 1].y, points[0].x, points[0].y);
+  fill(255, 0, 0);
+  ellipse(0, 300, 10, 10);
+  ellipse(500, 100, 10, 10);
 
-  pop();
+  noFill();
+  stroke(255);
+  beginShape();
+  curveVertex(0, 300); // Control point
+  curveVertex(100, 200);
+  curveVertex(200, 200);
+  curveVertex(500, 100); // Control point
+  endShape();
 }
