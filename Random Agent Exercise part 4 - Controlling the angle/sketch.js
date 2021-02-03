@@ -5,7 +5,7 @@ let angle = 45;
 
 let angleCount = 3;
 let angles = [];
-let history = []; // Array which will store all of the points that circle make. 
+let history = []; // Array which will store all of the points that circle make.
 let startAngle;
 let stepAngle;
 
@@ -60,7 +60,7 @@ function deflectAngle(_x, _y, _angles) {
   //   return randomAngle;
   // }
 
-  let randomAngle = floor(random(0, 180));
+  let randomAngle = floor(random(-angleCount, angleCount) + 0.5) * 90/angleCount;
 
   if (_x > width) {
   return randomAngle + 90;
