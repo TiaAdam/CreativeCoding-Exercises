@@ -18,22 +18,21 @@ function setup() {
 }
 
 function draw() {
-  // push();
-  // translate(width / 2, height / 2);
-  // for (let i = 0; i < points.length; i++) {
-  //   fill(0, 255, 0);
-  //   ellipse(points[i].x, points[i].y, 10, 5);
-  // }
-  // for (let i = 0; i < points.length - 1; i++) {
-  //   stroke(255);
-  //   line(points[i].x, points[i].y, points[i + 1].x, points[i + 1].y);
-  // }
+  //push();
+  translate(width / 2, height / 2);
+  for (let i = 0; i < points.length; i++) {
+    fill(0, 255, 0);
+    ellipse(points[i].x, points[i].y, 10, 5);
+  }
+  for (let i = 0; i < points.length - 1; i++) {
+    stroke(255);
+    //line(points[i].x, points[i].y, points[i + 1].x, points[i + 1].y);
+  }
   //
   // // Drawing a line inbetween the points.
   // line(points[points.length - 1].x, points[point.length - 1].y, points[0].x, points[0].y);
   //
   // pop();
-
 
   fill(255, 0, 0);
   ellipse(50, 300, 10, 10);
@@ -42,9 +41,8 @@ function draw() {
   noFill();
   stroke(255);
   push();
-  translate(width / 2, height / 2);
+  //translate(width / 2, height / 2);
   beginShape();
-
   curveVertex(points[points.length - 1].x, points[points.length - 1].y); // Control point, coordinate of the last point of the array
   for (let i = 0; i < points.length; i++) {
     curveVertex(points[i].x, points[i].y);
@@ -54,4 +52,6 @@ function draw() {
   endShape();
   pop();
 
-} // End of loop
+  // Will move the points on the circle
+  points[5].x += 1;
+}
