@@ -50,6 +50,7 @@ function draw() {
     curveVertex(points[i].x, points[i].y);
   }
   curveVertex(points[0].x, points[0].y);
+  curveVertex(points[1].x, points[1].y); // Closes the circle
   endShape();
   pop();
 
