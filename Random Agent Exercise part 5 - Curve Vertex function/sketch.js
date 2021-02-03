@@ -18,7 +18,8 @@ function setup() {
 }
 
 function draw() {
-
+  
+  //radius = map(mouseX,0,400,50,200);
   curveVertex(400, 400);
   for (let a = 0; a <= 360; a += stepAngle) {
     let vx = (radius * cos(a)) + 400;
@@ -26,7 +27,7 @@ function draw() {
     //fill(a,100,100);
     curveVertex(vx, vy);
   }
-  //curveVertex(400,400);
+  curveVertex(400,400);
   endShape(CLOSE);
 
   // strokeWeight(5);
