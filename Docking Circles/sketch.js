@@ -1,4 +1,6 @@
-let points = [];
+// Docking Circles - 23th of February, 2021
+
+let points = []; // Array of points.
 let minRadius = 4;
 let maxRadius = 20;
 function setup() {
@@ -6,6 +8,8 @@ function setup() {
     points.push(new Docker(500, 500, 12));
     //noLoop();
 }
+
+// Class of Dockers
 class Docker {
     constructor(_x, _y, _r) {
         this.position = createVector(_x, _y);
