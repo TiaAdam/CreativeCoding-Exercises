@@ -27,6 +27,7 @@ function draw() {
   let speed = map(mouseX, 0, width, 2, 40);
   for (let x = 0; x < 10; x++) {
     stroke(255);
+    fill(0,0,255);
     strokeWeight(5);
     point(xPos, yPos);
 
