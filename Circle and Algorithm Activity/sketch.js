@@ -2,15 +2,12 @@
 
 let points = [];
 
-
-
 function setup() {
   createCanvas(500, 500);
   points.push(createVector(200, 300));
   points.push(createVector(500, 400));
   noLoop();
 }
-
 
 
 function draw() {
@@ -22,7 +19,6 @@ function draw() {
 }
 
 
-
 // At the moment this is not receiving any parameter. Consider using something here
 function dock() {
   //This is the ball we want to move (latest in Array)
@@ -31,17 +27,14 @@ function dock() {
   let dockBall = points[0];
 
 
-
   let resultantV = p5.Vector.sub(currentBall, dockBall)
   let rHeading = resultantV.heading();
   let rDist = resultantV.mag() - 55;
 
 
-
   // Here we thake away the calculated distance from the current position
   let newPositionX = currentBall.x - cos(rHeading) * rDist;
   let newPositionY = currentBall.y - sin(rHeading) * rDist;
-
 
 
   // Here we draw the new Circle
