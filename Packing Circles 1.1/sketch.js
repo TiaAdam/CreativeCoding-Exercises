@@ -20,9 +20,20 @@ function setup (){
 
 function draw (){
   background(0);
-  if(circles.length < 500){
-    
+  for (let i = 0; i< circles.length; i++){
+    let packingCircle = circles[i];
+    stroke(255,0,0);
+    noFill();
+    ellipse(packingCircle.position.x, packingCircle.position.y, packingCircle.radius*2, packingCircle.radius*2);
 
   }
+}
+
+// Showing created circle function.
+Circle.prototype.show = function() {
+  noFill();
+  strokeWeight(1.5);
+  stroke(255, 0, 175, 225);
+  ellipse(this.x, this.y, this.r * 2);
 
 }
