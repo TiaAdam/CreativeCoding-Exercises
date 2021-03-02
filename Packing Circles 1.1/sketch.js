@@ -22,7 +22,7 @@ function draw (){
   background(0);
   for (let i = 0; i < circles.length; i++){
     let packingCircle = circles[i];
-    stroke(0,255,0);
+    stroke(255,255,0);
     noFill();
     ellipse(packingCircle.position.x, packingCircle.position.y, packingCircle.radius*2, packingCircle.radius*2);
 
