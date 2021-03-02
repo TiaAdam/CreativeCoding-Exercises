@@ -6,7 +6,7 @@ let fontPath;
 function setup() {
   createCanvas(500, 500);
   noLoop();
-  opentype.load("data/Roboto-Lightitalic.ttf", function (err, f) {
+  opentype.load('data/blackjack.otf', function(err, f) {
     if (err) {
       console.log(err);
     } else {
@@ -21,5 +21,13 @@ function draw() {
   background(0);
 
   translate(20, 220);
-  fontPath = font.getPath("Tia", 0, 0, 20);
+  fontPath = font.getPath("Tia", 100, 300, 100);
+  beginShape();
+  for (let i = 0; i < fontPath.commands.length; i++) {
+    fill(255, 0, 0);
+    noStroke();
+    ellipse(fontPath.commands[i].x, fontPath.commands[i].y);
+    vertex(fontPath);
+  }
+  endShape();
 }
