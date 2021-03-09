@@ -1,4 +1,4 @@
-// Letter Form - 2nd of March, 2021
+// Letter Form - 3rd and 9th of March, 2021
 
 let font;
 let fontPath;
@@ -26,7 +26,7 @@ function draw() {
   let pah = new g.Path(fontPath.commands);
   path = g.resampleByAmount(path, 500);
 
-  
+
   beginShape();
   for (let i = 0; i < fontPath.commands.length; i++) {
     fill(255, 0, 0);
