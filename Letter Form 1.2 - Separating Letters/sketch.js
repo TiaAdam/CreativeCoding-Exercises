@@ -8,7 +8,7 @@ let path;
 function setup() {
   createCanvas(800, 800);
   noLoop();
-  opentype.load('data/blackjack.otf', function(err, f) {
+  opentype.load('data/Roboto-BoldItalic.ttf', function(err, f) {
     if (err) {
       console.log(err);
     } else {
@@ -18,13 +18,13 @@ function setup() {
   });
 }
 
-// Draw Function 
+// Draw Function
 function draw() {
   if (!font) return;
   background(0);
 
   translate(20, 220);
-  fontPath = font.getPath("This is Tijana!", 100, 300, 100);
+  fontPath = font.getPath("Hi people!", 100, 300, 100);
   let pah = new g.Path(fontPath.commands);
   path = g.resampleByAmount(path, 500);
 
