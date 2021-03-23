@@ -16,6 +16,7 @@ let diameter = 20;
 function setup() {
   createCanvas(900, 900);
   strokeCap(ROUND);
+  //noLoop();
 }
 
 function draw() {
@@ -44,7 +45,7 @@ function draw() {
     ellipse(0,y, diameter, diameter);
     pop();
   }
-  angle++;
+  //angle++;
 }
 
 // KeyPressed function will save an image in png format whenever user presses capital 'S' or lower 's' key.
