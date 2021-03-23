@@ -11,11 +11,14 @@ let radius = 300; // A constant variable - 600/2.
 function setup (){
   createCanvas(600,600);
   angleMode(DEGREES); // Need to be specified - RADIANS or DEGREES.
-  noStroke();
+  //noStroke();
+  strokeCap(ROUND); // Sets the style for line endings.
 }
 
+// Contains the main code.
 function draw(){
   background(0);
+  
 
 }
 
