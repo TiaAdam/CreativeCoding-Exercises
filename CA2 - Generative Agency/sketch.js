@@ -2,9 +2,16 @@
 // Tijana Adam N001070280
 // Creative Coding Y4
 
-// Creates canvas and runs only once. 
+//Variables that will be used in the project.
+let noOfSegments = 20;
+let stepAngle = 360/noOfSegments; // Changing based on noOfSegments variable.
+let radius = 300; // A constant variable - 600/2.
+
+// Creates canvas and runs only once.
 function setup (){
   createCanvas(600,600);
+  angleMode(DEGREES); // Need to be specified - RADIANS or DEGREES.
+  noStroke();
 }
 
 function draw(){
