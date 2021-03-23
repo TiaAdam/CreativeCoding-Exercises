@@ -2,7 +2,7 @@
 // Tijana Adam N001070280
 // Creative Coding Y4
 
-let noOfSegments = 300;
+let noOfSegments = 90;
 let angle = 360 / noOfSegments;
 let radius = 450;
 
@@ -25,13 +25,12 @@ function draw() {
   translate(width / 2, height / 2);
   // To rotate EVERYTHING!
   rotate(angle, x);
-  frameRate(5);
+  frameRate(9);
 
   let noOfSegments = int(map(mouseY, 0, height, 2, 80));
   let radius = mouseX - width / 2; //let angle = TAU / noOfSegments; // TAU is a mathematical constant with the value 6.2831855. It is the circle constant relating the circumference of a circle to its linear dimension, the ratio of the circumference of a circle to its radius.
   // For loop
   for (let a = 0; a <= noOfSegments; a++) {
-    push();
     let x = cos(angle * a) * radius;
     let y = sin(angle * a) * radius;
     fill(0, 255, 255);
@@ -43,7 +42,6 @@ function draw() {
     // Creating end points of the lines - ellipse.
     noStroke();
     ellipse(0,y, diameter, diameter);
-    pop();
   }
   angle++;
 }
