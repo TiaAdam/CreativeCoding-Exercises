@@ -17,8 +17,27 @@ function setup (){
 
 // Contains the main code.
 function draw(){
-  background(0);
-  
+  background(255);
+  translate(width/2, height/2);
+
+  noOfSegments = map(mouseY, 0, height,2,80);
+  radius = mouseX - width/2;
+  stepAngle = 360/noOfSegments;
+
+  fill(360,100,100);
+  push();
+  //translate(250,250);
+  beginShape(TRIANGLE_FAN);
+  vertex(250,250);
+  // For loop - variable a represents alpha.
+  for(let a=0; a<=noOfSegments; a++){
+    let vx= (radius * cos(a)) +300;
+    let vy= (radius *sin(a)) +300;
+    fill(a,100,100);
+
+  }
+  endShape();
+  pop();
 
 }
 
