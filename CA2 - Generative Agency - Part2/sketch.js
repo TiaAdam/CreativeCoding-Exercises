@@ -27,6 +27,7 @@ function draw() {
     let x = cos(angle * a) * radius;
     let y = sin(angle * a) * radius;
     fill(0,255,255);
+    stroke('#fae');
     strokeWeight(5);
     line(0,0,x,y);
   }
