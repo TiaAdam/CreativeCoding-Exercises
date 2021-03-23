@@ -6,10 +6,15 @@ let noOfSegments = 300;
 let angle = 360 / noOfSegments;
 let radius = 450;
 
+// For testing the line of code for movement of the line.
+let testX = 300;
+let testY = 300;
+// End point of lines - ellipse.
+let diameter = 20;
+
 function setup() {
   createCanvas(900, 900);
   strokeCap(ROUND);
-
 }
 
 function draw() {
@@ -19,17 +24,23 @@ function draw() {
 
   let noOfSegments = int(map(mouseY, 0, height, 2, 80));
   let radius = mouseX - width / 2;
-  let angle = TAU / noOfSegments;
-
+  let angle = TAU / noOfSegments; // TAU is a mathematical constant with the value 6.2831855. It is the circle constant relating the circumference of a circle to its linear dimension, the ratio of the circumference of a circle to its radius.
 
   // For loop
-  for(let a = 0; a <= noOfSegments; a++){
+  for (let a = 0; a <= noOfSegments; a++) {
+    push();
     let x = cos(angle * a) * radius;
     let y = sin(angle * a) * radius;
-    fill(0,255,255);
+    fill(0, 255, 255);
     stroke('#fae');
     strokeWeight(5);
-    line(0,0,x,y);
+    line(0, 0, x, y);
+    //line(x*sin(radians(angle)), 0, x, y);
+
+    // Creating end points of the lines - ellipse.
+    noStroke();
+    ellipse(0,y, diameter, diameter);
+    pop();
   }
 }
 
