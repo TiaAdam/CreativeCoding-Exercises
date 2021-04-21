@@ -25,7 +25,7 @@ function draw() {
   translate(width / 2, height / 2);
   // To rotate EVERYTHING!
   rotate(angle, x);
-  frameRate(9);
+  frameRate(5);
 
   let noOfSegments = int(map(mouseY, 0, height, 2, 80));
   let radius = mouseX - width / 2; //let angle = TAU / noOfSegments; // TAU is a mathematical constant with the value 6.2831855. It is the circle constant relating the circumference of a circle to its linear dimension, the ratio of the circumference of a circle to its radius.

@@ -12,6 +12,7 @@ let testY = 300;
 // End point of lines - ellipse.
 let diameter = 20;
 //let x;
+let points = [];
 
 function setup() {
   createCanvas(900, 900);
