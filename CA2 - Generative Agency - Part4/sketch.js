@@ -9,11 +9,17 @@ let x = 200;
 let y = 200;
 // Variable for ellipse
 let diameter = 30;
+// Variables for color interaction
+let r,g,b; // Will work on the principle of random colours being generated.
 
 function setup() {
   createCanvas(500, 500);
   strokeCap(ROUND);
   //noLoop();
+  // Creating random colours.
+  r = random(255);
+  g = random(255);
+  b = random(255);
 }
 
 function draw() {
@@ -27,19 +33,19 @@ function draw() {
     // To rotate EVERYTHING!
     push()
     rotate(radians(a));
-    fill(0, 255, 255);
-    stroke('#fae');
+    fill(r, g, b);
+    stroke(r,g,b);
     strokeWeight(5);
     //line(0, 0, x, y);
     line(x * sin(radians(frameCount)), 0, 0, y - diameter / 2); // y-d, to avoid overlaping of the line and ellipse.
     // Polygon shape
-    stroke(209, 243, 255);
+    stroke(r, g, b);
     noFill();
     translate(width * 0.2, height * 0.5);
     rotate(frameCount / -100.0);
     polygon(0, 0, 30, 7);
     // Ellipse shape
-    stroke(253, 253, 195);
+    stroke(r, g, b);
     noFill();
     ellipse(0, y, diameter, diameter);
 
@@ -58,6 +64,18 @@ function polygon(x, y, radius, npoints) {
     vertex(vx, vy);
   }
   endShape(CLOSE);
+}
+
+// Mouse pressed function for changing colours.
+function mousePressed() {
+  // Check if mouse is inside the circle
+  let d = dist(mouseX, mouseY, 360, 200);
+  if (d < 100) {
+    // Pick new random color values
+    r = random(255);
+    g = random(255);
+    b = random(255);
+  }
 }
 
 // KeyPressed function will save an image in png format whenever user presses capital 'S' or lower 's' key.
