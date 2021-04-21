@@ -3,8 +3,7 @@
 // Creative Coding Y4
 // Version 4
 
-let noOfSegments = 90;
-let angle = 360 / noOfSegments;
+let angle = 0;
 let radius = 250;
 let x = 200;
 let y = 200;
@@ -32,7 +31,7 @@ function draw() {
     stroke('#fae');
     strokeWeight(5);
     //line(0, 0, x, y);
-    line(x * sin(radians(frameCount)), 0, x, y - diameter / 2); // y-d, to avoid overlaping of the line and ellipse.
+    line(x * sin(radians(frameCount)), 0, 0, y - diameter / 2); // y-d, to avoid overlaping of the line and ellipse.
     // Polygon shape
     stroke(209, 243, 255);
     noFill();
@@ -40,7 +39,7 @@ function draw() {
     rotate(frameCount / -100.0);
     polygon(0, 0, 30, 7);
     // Ellipse shape
-    stroke(209, 243, 255);
+    stroke(253, 253, 195);
     noFill();
     ellipse(0, y, diameter, diameter);
 
@@ -54,9 +53,9 @@ function polygon(x, y, radius, npoints) {
   let angle = TWO_PI / npoints;
   beginShape();
   for (let a = 0; a < TWO_PI; a += angle) {
-    let sx = x + cos(a) * radius;
-    let sy = y + sin(a) * radius;
-    vertex(sx, sy);
+    let vx = x + cos(a) * radius;
+    let vy = y + sin(a) * radius;
+    vertex(vx, vy);
   }
   endShape(CLOSE);
 }
