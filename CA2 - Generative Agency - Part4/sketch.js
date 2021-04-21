@@ -1,7 +1,7 @@
 // CA2 - Generative Agency
 // Tijana Adam N001070280
 // Creative Coding Y4
-// Version 4
+// Version 4 - FINAL
 
 let angle = 0;
 let radius = 250;
