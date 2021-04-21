@@ -1,6 +1,7 @@
 // CA2 - Generative Agency
 // Tijana Adam N001070280
 // Creative Coding Y4
+// Version 2 
 
 let noOfSegments = 300;
 let angle = 360 / noOfSegments;

@@ -1,6 +1,7 @@
 // CA2 - Generative Agency
 // Tijana Adam N001070280
 // Creative Coding Y4
+// Staring version 
 
 //Variables that will be used in the project.
 let noOfSegments = 20;
