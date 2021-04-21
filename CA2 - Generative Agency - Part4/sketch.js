@@ -6,7 +6,7 @@
 let noOfSegments = 90;
 let angle = 360 / noOfSegments;
 let radius = 250;
-let x =200;
+let x = 200;
 let y = 200;
 // Variable for ellipse
 let diameter = 30;
@@ -24,7 +24,7 @@ function draw() {
   let noOfSegments = int(map(mouseY, 0, height, 2, 80));
 
   // For loop
-  for (let a = 0; a <= 360; a+=10) {
+  for (let a = 0; a <= 360; a += 10) {
     // To rotate EVERYTHING!
     push()
     rotate(radians(a));
@@ -32,17 +32,21 @@ function draw() {
     stroke('#fae');
     strokeWeight(5);
     //line(0, 0, x, y);
-    line(x*sin(radians(frameCount)), 0, x, y+diameter/2); // y-d, to avoid overlaping of the line and ellipse.
+    line(x * sin(radians(frameCount)), 0, x, y - diameter / 2); // y-d, to avoid overlaping of the line and ellipse.
     // Polygon shape
-    stroke(209,243,255);
+    stroke(209, 243, 255);
     noFill();
     translate(width * 0.2, height * 0.5);
     rotate(frameCount / -100.0);
-    polygon(0,0,30,7);
+    polygon(0, 0, 30, 7);
+    // Ellipse shape
+    stroke(209, 243, 255);
+    noFill();
+    ellipse(0, y, diameter, diameter);
 
-    pop()
-  }
-  angle++;
+  pop()
+}
+angle++;
 }
 
 // Properties of polygon that has been initialised in function draw.
